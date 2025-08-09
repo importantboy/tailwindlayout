@@ -42,7 +42,7 @@ function Navbar() {
           </h2>
           {/* menu navigation links  */}
           <nav
-            className="text-lg md:text-xl list-none flex gap-4 capitalize 
+            className="text-md md:text-xl list-none flex gap-4 capitalize 
       absolute md:static top-20 hover:cursor-pointer [&>li]:hover:text-emerald-400 flex-col md:flex-row text-center"
           >
             <li>home</li>
