@@ -8,7 +8,7 @@ function Navbar() {
     <>
       {/* open button  */}
       <h2
-        className={`md:hidden text-4xl absolute right-10 top-5 cursor-pointer z-40 text-emerald-800  ${
+        className={`md:hidden text-4xl absolute right-10 top-3 cursor-pointer z-50  text-emerald-50  ${
           open && "hidden"
         }`} 
         onClick={() => setopen(!open)}
@@ -17,8 +17,8 @@ function Navbar() {
       </h2>
        {/* menu container  */}
       <div
-        className={`fixed inset-0 md:static md:flex w-full h-screen  md:bg-transparent ${
-          open ? `bg-black/50` : `bg-transparent pointer-events-none`
+        className={`fixed inset-0 md:static md:h-auto md:flex w-full h-screen  z-40 md:bg-transparent ${
+          open ? `bg-black/50` : `bg-transparent `
         } overflow-x-hidden transition-opacity duration-500`}
       >
         {/* {menu items container}  */}
@@ -30,9 +30,12 @@ function Navbar() {
        onClick={e => e.stopPropagation()}
         >
           {/* {menu heading}  */}
-          <h2 className="text-lg sm:text-2xl tracking-wide absolute md:static top-5 left-5">
-            Mywebsite
+          <div>
+          <h2 className="text-sm sm:text-2xl tracking-wide absolute md:static top-6 left-5">
+            CloudFlex 
           </h2>
+          <p className="absolute md:static top-12 left-5 text-[10px]">Next-Gen Cloud Hosting</p>
+          </div>
            {/* menu close button  */}
           <h2
             className={`md:hidden absolute text-3xl font-bold right-10 top-5 cursor-pointer hover:text-emerald-500`}
@@ -42,12 +45,15 @@ function Navbar() {
           </h2>
           {/* menu navigation links  */}
           <nav
-            className="text-sm md:text-xl list-none flex gap-4 capitalize 
+            className="text-sm md:text-lg list-none flex gap-4 capitalize 
       absolute md:static top-20 hover:cursor-pointer [&>li]:hover:text-emerald-400 flex-col md:flex-row text-center"
           >
             <li>home</li>
-            <li>about</li>
-            <li>contact us</li>
+            <li>features</li>
+            <li>pricing</li>
+            <li>Testimonials</li>
+            <li>contact</li>
+
           </nav>
         </div>
       </div>
