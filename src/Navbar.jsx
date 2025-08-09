@@ -30,7 +30,7 @@ function Navbar() {
        onClick={e => e.stopPropagation()}
         >
           {/* {menu heading}  */}
-          <h2 className="text-xl sm:text-2xl tracking-wide absolute md:static top-5 left-5">
+          <h2 className="text-lg sm:text-2xl tracking-wide absolute md:static top-5 left-5">
             Mywebsite
           </h2>
            {/* menu close button  */}
@@ -42,7 +42,7 @@ function Navbar() {
           </h2>
           {/* menu navigation links  */}
           <nav
-            className="text-md md:text-xl list-none flex gap-4 capitalize 
+            className="text-sm md:text-xl list-none flex gap-4 capitalize 
       absolute md:static top-20 hover:cursor-pointer [&>li]:hover:text-emerald-400 flex-col md:flex-row text-center"
           >
             <li>home</li>
