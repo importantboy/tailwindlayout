@@ -8,7 +8,7 @@ function Navbar() {
     <>
       {/* open button  */}
       <h2
-        className={`md:hidden text-4xl absolute right-10 top-3 cursor-pointer z-50  text-emerald-50  ${
+        className={`md:hidden text-4xl fixed right-15 top-3 cursor-pointer z-50  text-emerald-50  ${
           open && "hidden"
         }`} 
         onClick={() => setopen(!open)}
