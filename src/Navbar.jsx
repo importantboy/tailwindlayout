@@ -1,9 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
 
 function Navbar() {
   const [open, setopen] = useState(false);
+  useEffect(() => {
+     if(open){
+        document.body.style.overflow = "hidden";
+     } else {
+        document.body.style.overflow = "auto";
+     }
+     () => {
+        document.body.style.overflow = "auto";
+       
+     }
+  },[open])
   return (
     <>
       {/* open button  */}
