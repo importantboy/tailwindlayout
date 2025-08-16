@@ -34,7 +34,7 @@ function Navbar() {
       >
         {/* {menu items container}  */}
         <div
-          className={`w-full md:w-full h-screen flex-col md:flex-row md:h-20 justify-start absolute md:static md:translate-x-0 right-0 md:right-auto ${
+          className={`w-full md:w-full h-[100dvh] flex-col md:flex-row md:h-20 justify-start absolute md:static md:translate-x-0 right-0 md:right-auto ${
             open ? `translate-x-0` : `translate-x-full`
           } bg-emerald-700 transition-transform duration-500 ease-in-out
     text-emerald-50 flex md:justify-between px-5 items-center`}

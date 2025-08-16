@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './Navbar';
 import Hero from './Hero';
 import Features from './Features';
+import Pricing from './Pricing';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
        <Navbar />
        <Hero />
        <Features />
+       <Pricing />
     </div>
   )
 }
