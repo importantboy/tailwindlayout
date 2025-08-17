@@ -99,7 +99,7 @@ function Testimonials() {
         <Slider {...settings}>
           {testimonials.map((item) => {
             return (
-              <div className="mx-2 md:mx-5 p-2 md:p-6">
+              <div className="p-4 ">
                 <div
                   key={item.id}
                   className=" shadow-md/40 rounded-md min-h-[40vh] p-4 flex flex-col items-center"
