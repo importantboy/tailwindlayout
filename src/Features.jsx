@@ -11,7 +11,7 @@ function Features() {
       <div className="card-container flex flex-col gap-2 md:flex-row md:[&>.card]:w-1/4 md:[&>.card]:max-w-1/3 sm:[&>.card]:grow-1 sm:flex-wrap justify-center">
         {/* card items  */}
         {/* card-1 */}
-        <div className="card w-full rounded-md min-h-60 shadow-md ">
+        <div className="card w-full rounded-md min-h-60 shadow-sm/80 ">
           <div className="card-logo text-center my-5">
             <p className="text-4xl font-bold bg-emerald-800 inline-block p-5 rounded-full text-emerald-50">
               <FaServer />
@@ -25,7 +25,7 @@ function Features() {
           </p>
         </div>
         {/* card-2 */}
-        <div className="card w-full rounded-md min-h-60 shadow-md ">
+        <div className="card w-full rounded-md min-h-60 shadow-sm/80 ">
           <div className="card-logo text-center my-5">
             <p className="text-4xl font-bold bg-emerald-800 inline-block p-5 rounded-full text-emerald-50">
               <IoIosTime />
@@ -40,7 +40,7 @@ function Features() {
           </p>
         </div>
         {/* card-3 */}
-        <div className="card w-full rounded-md min-h-60 shadow-md ">
+        <div className="card w-full rounded-md min-h-60 shadow-sm/80 ">
           <div className="card-logo text-center my-5">
             <p className="text-4xl font-bold bg-emerald-800 inline-block p-5 rounded-full text-emerald-50">
               <FaChartLine />
@@ -55,7 +55,7 @@ function Features() {
           </p>
         </div>
         {/* card-4 */}
-        <div className="card w-full rounded-md min-h-60 shadow-md ">
+        <div className="card w-full rounded-md min-h-60 shadow-sm/80 ">
           <div className="card-logo text-center my-5">
             <p className="text-4xl font-bold bg-emerald-800 inline-block p-5 rounded-full text-emerald-50">
               <FaCloudscale />

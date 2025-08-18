@@ -65,7 +65,6 @@ function Navbar() {
             <li>features</li>
             <li>pricing</li>
             <li>Testimonials</li>
-            <li>contact</li>
           </nav>
         </div>
       </div>

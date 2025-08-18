@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
+import { useEffect, useState } from "react";
 
 const testimonials = [
   {
@@ -51,86 +52,72 @@ const testimonials = [
   },
 ];
 
-function Testimonials() {
-  // const [rating, setRating] = useState(0);
+export default function Testimonials() {
+  const [width, setwidth] = useState(window.innerWidth);
+  useEffect(() => {
+     const handleResize = () => setwidth(window.innerWidth);
+     window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    () => { 
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   var settings = {
-    // dots: true,
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: width > 1280 ? 3 : width > 720 ? 2 : width > 480 ? 1 : 1,
     slidesToScroll: 1,
     autoplay: true,
+    initialSlide: 0,
     speed: 2000,
     autoplaySpeed: 2000,
-    cssEase: "linear",
-    arrows : false,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide : 1
-        }
-      }
-    ]
+    cssEase: "ease",
+    arrows: false,
   };
+
   return (
     <div className="px-2 md:px-6 min-h-screen flex flex-col justify-center">
       <h2 className="text-3xl md:text-5xl font-semibold text-center capitalize my-3">
         testimonials
       </h2>
-      <div className="slider-container w-full my-10 px-10">
+      <div className="slider-container w-full px-2 md:my-10 lg:px-10">
         <Slider {...settings}>
-          {testimonials.map((item) => {
-            return (
-              <div className="p-4 ">
-                <div
-                  key={item.id}
-                  className=" shadow-md/40 rounded-md min-h-[40vh] p-4 flex flex-col items-center"
-                >
-                  <div className="avatar-img-container">
-                    <img
-                      src={item.avatar}
-                      className="w-20 h-20 rounded-full shadow-md"
-                    />
-                  </div>
-                  <div className="user-name text-lg capitalize font-semibold mt-4">
-                    <p>{item.name}</p>
-                  </div>
-                  <div className="user-company-details">
-                    <p className="inline-block">{item.role}</p>
-                    <p className="inline-block"> ( {" " + item.company} )</p>
-                  </div>
-                  <div className="rating-container">
-                    <Rating style={{ maxWidth: 180 }} value={item.rating} readOnly />
-                  </div>
-                  <div className="review text-center my-3">
-                    <i className="text-center">"{item.review}"</i>
-                  </div>
+          {testimonials.map((item) => (
+            <div key={item.id} className="p-4 ">
+              {" "}
+              {/* Key moved here */}
+              <div className="shadow-sm/40 rounded-md min-h-[300px] p-4 flex flex-col items-center min-w-2xs">
+                <div className="avatar-img-container">
+                  <img
+                    src={item.avatar}
+                    className="w-20 h-20 rounded-full shadow-md"
+                    alt={item.name}
+                  />
+                </div>
+                <div className="user-name text-lg capitalize font-semibold mt-4">
+                  <p>{item.name}</p>
+                </div>
+                <div className="user-company-details">
+                  <p className="inline-block">{item.role}</p>
+                  <p className="inline-block"> ( {" " + item.company} )</p>
+                </div>
+                <div className="rating-container">
+                  <Rating
+                    style={{ maxWidth: 180 }}
+                    value={item.rating}
+                    readOnly
+                  />
+                </div>
+                <div className="review text-center my-3">
+                  <i className="text-center">"{item.review}"</i>
                 </div>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </Slider>
       </div>
     </div>
   );
 }
-
-export default Testimonials;
