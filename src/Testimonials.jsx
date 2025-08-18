@@ -67,7 +67,7 @@ export default function Testimonials() {
 
   var settings = {
     infinite: true,
-    slidesToShow: width > 1280 ? 3 : width > 720 ? 2 : width > 480 ? 1 : 1,
+    slidesToShow: width > 1280 ? 4 : width > 720 ? 3 : width > 480 ? 2 : 1,
     slidesToScroll: 1,
     autoplay: true,
     initialSlide: 0,

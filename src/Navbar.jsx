@@ -42,16 +42,16 @@ function Navbar() {
         >
           {/* {menu heading}  */}
           <div>
-            <h2 className="text-lg sm:text-2xl tracking-wide absolute md:static top-6 left-5">
+            <h2 className="text-lg sm:text-2xl tracking-wide absolute md:static top-12 left-5">
               CloudFlex
             </h2>
-            <p className="absolute md:static top-12 left-5 text-[15px]">
+            <p className="absolute md:static top-18  left-5 text-[15px]">
               Next-Gen Cloud Hosting
             </p>
           </div>
           {/* menu close button  */}
           <h2
-            className={`md:hidden absolute text-3xl font-bold right-10 top-5 cursor-pointer hover:text-emerald-500`}
+            className={`md:hidden absolute text-3xl font-bold right-10 top-15 cursor-pointer hover:text-emerald-500`}
             onClick={() => setopen(!open)}
           >
             <IoMdClose />
@@ -59,7 +59,7 @@ function Navbar() {
           {/* menu navigation links  */}
           <nav
             className="text-md md:text-lg list-none flex gap-4 capitalize 
-      absolute md:static top-25 font-semibold hover:cursor-pointer [&>li]:hover:text-emerald-800 [&>li]:hover:bg-emerald-400 md:[&>li]:p-3 md:w-auto flex-col md:flex-row text-center pointer-events-auto md:[&>li]:rounded-sm"
+      absolute md:static top-40 font-semibold hover:cursor-pointer [&>li]:hover:text-emerald-800 [&>li]:hover:bg-emerald-400 md:[&>li]:p-3 md:w-auto flex-col md:flex-row text-center pointer-events-auto md:[&>li]:rounded-sm"
           >
             <li>home</li>
             <li>features</li>
